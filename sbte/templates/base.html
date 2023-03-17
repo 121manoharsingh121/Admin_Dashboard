@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    {% load static %}
+    <link rel="shortcut icon" href="./images/inner-image/logo-2.jpg" />
+    <title>SBTE - Bihar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static './css/style.css' %}">
+    <link rel="stylesheet" href="{% static './assets/select2/select2.min.css' %}">
+    <link rel="stylesheet" href="{% static '/assets/select2-bootstrap-theme/select2-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static '/assets/css/custom.css' %}">
+    <link rel="stylesheet" href="{% static './assets/datatables-bs4/css/dataTables.bootstrap4.min.css' %}">
+    <link rel="stylesheet" href="{% static './assets/datatables-responsive/css/responsive.bootstrap4.min.css' %}">
+    <link rel="stylesheet" href="{% static './assets/datatables-buttons/css/buttons.bootstrap4.min.css' %}">
+    <link rel="stylesheet" href="{% static './assets/simple-line-icons/css/simple-line-icons.css' %}">
+    <link rel="stylesheet" href="{% static './assets/css/vendor.bundle.base.css' %}">
+    <link rel="stylesheet" href="{% static './assets/daterangepicker/daterangepicker.css' %}">
+    <style>
+        select#exampleFormControlSelect1 {
+            width: 90px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <!-- top navigation -->
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark-1 fixed-top py-lg-0" id="main_navbar">
+        <!-- <div class=""> -->
+            <a class="navbar-brand mr-5" href="/admin_dashboard/">
+                <img src="/static/images/inner-image/logo-2.png" alt="logo" class="logo-dark">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin_dashboard/">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-has="true" aria-expanded="false">
+                            Master Entry
+                        </a>
+                        <ul class="dropdown-menu animated fadeIn" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Examination Center Management</a></li>
+                            <li><a class="dropdown-item" href="/examschedule">Examination Schedule</a></li>
+                            <li><a class="dropdown-item" href="#">Examination Center Schedule</a></li>
+                            <li><a class="dropdown-item" href="">Examination Type Management</a></li>
+                            <li><a class="dropdown-item" href="">Academic Term</a></li>
+                            <li><a class="dropdown-item" href="/academicsessionlist/">Academic Session</a></li>
+                            <li><a class="dropdown-item" href="">Seat Approval</a></li>
+                            <li><a class="dropdown-item" href="">Discipline Management</a></li>
+                            <li><a class="dropdown-item" href="">Course Management</a></li>
+                            <li><a class="dropdown-item" href="/institute_list/">Institute Management</a></li>
+                            <li><a class="dropdown-item" href="/program_list/">Program Type Management</a></li>
+                            <li><a class="dropdown-item" href="#">Import Data</a></li>
+                            <li><a class="dropdown-item" href="exam-schedule.php">Export Data</a></li>
+                            <li><a class="dropdown-item" href="#">Unfair Rules Management</a></li>
+                            <li><a class="dropdown-item" href="">Unfair Punishment Management</a></li>
+                        </ul>
+                    </li>
+    
+    
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-has="true" aria-expanded="false">
+                            Marks Entry
+                        </a>
+                        <ul class="dropdown-menu animated fadeIn" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/newmark">New Marks Entry</a></li>
+                            <li><a class="dropdown-item" href="/oldmark">Old Marks Entry</a></li>
+                            <li><a class="dropdown-item" href="/editmark">Edit Marks</a></li>
+                            <li><a class="dropdown-item" href="/individualmark">Individual Mark</a></li>
+                            <li><a class="dropdown-item" href="/bulkmark">Bulk Marks Entry</a></li>
+                          
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-has="true" aria-expanded="false">
+                            Students
+                        </a>
+                        <ul class="dropdown-menu animated fadeIn" aria-labelledby="navbarDropdown">
+                            <!-- <li><a class="dropdown-item" href="">Student Information</a></li> -->
+                            <li><a class="dropdown-item" href="/studentlistview/">Student View</a></li>
+                            <li><a class="dropdown-item" href="/studentdetail">Student Detail</a></li>
+                            <!-- <li><a class="dropdown-item" href="registration-card.php">Registration Card</a></li> -->
+                            <li><a class="dropdown-item" href="/studentreg">Student Registration</a></li>
+                            <li><a class="dropdown-item" href="/registrationverification">Registration
+                                    Verification</a></li>
+                            <li><a class="dropdown-item" href="#">Modification Details</a></li>
+                        </ul>
+                    </li>
+    
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-has="true" aria-expanded="false">
+                            Examination Form
+                        </a>
+                        <ul class="dropdown-menu animated fadeIn" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/examform">Examiner Form</a></li>
+                            <li><a class="dropdown-item" href="#">Exam Registration</a></li>
+                            <li><a class="dropdown-item" href="#">Student Modification Details</a></li>
+                            <li><a class="dropdown-item" href="/semesterregistration">Semester Registration</a></li>
+                            <li><a class="dropdown-item" href="/backlogregistration">Backlog Registration</a></li>
+                            <li><a class="dropdown-item" href="/admitcardgeneration">Admit Card Generation</a></li>
+                            <li><a class="dropdown-item" href="/examverificationnew">Exam verification
+                                    New Syllabus</a></li>
+                            <li><a class="dropdown-item" href="#">Uniform Means</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown1"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <ul class="dropdown-menu animated fadeIn" aria-labelledby="navbarDropdown1">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <div class="dropdown-divider"></div>
+                                    <li></li><a class="dropdown-item" href="#">Something else here</a>
+                                    <li class="nav-item dropdown">
+                                        <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Left Dropdown
+                                        </a>
+                                        <ul class="dropdown-menu left" aria-labelledby="navbarDropdown2">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                            <div class="dropdown-divider"></div>
+                                            <li></li><a class="dropdown-item" href="#">Something else here</a>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-has="true" aria-expanded="false">
+                            Report
+                        </a>
+                        <ul class="dropdown-menu animated fadeIn" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'report-view' %}" >Tabular Report</a></li>
+                            <li><a class="dropdown-item" href="#">Web Data</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown1"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Admit Card
+                                </a>
+                                <ul class="dropdown-menu animated fadeIn" aria-labelledby="navbarDropdown1">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li class="nav-item dropdown">
+                                        <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Left Dropdown
+                                        </a>
+                                        <ul class="dropdown-menu left" aria-labelledby="navbarDropdown2">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Attendance Sheet</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown1"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    OMR
+                                </a>
+                                <ul class="dropdown-menu animated fadeIn" aria-labelledby="navbarDropdown1">
+                                    <li><a class="dropdown-item" href="fetch-omr-data.php">OMR Data</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li class="nav-item dropdown">
+                                        <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Left Dropdown
+                                        </a>
+                                        <ul class="dropdown-menu left" aria-labelledby="navbarDropdown2">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown1"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Student Result Summary
+                                </a>
+                                <ul class="dropdown-menu animated fadeIn" aria-labelledby="navbarDropdown1">
+                                    <li><a class="dropdown-item" href="fetch-omr-data.php">OMR Data</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li class="nav-item dropdown">
+                                        <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Left Dropdown
+                                        </a>
+                                        <ul class="dropdown-menu left" aria-labelledby="navbarDropdown2">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown1"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Student Result Summary
+                                </a>
+                                <ul class="dropdown-menu left animated fadeIn" aria-labelledby="navbarDropdown1">
+                                    <li><a class="dropdown-item" href="fetch-omr-data.php">OMR Data</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li class="nav-item dropdown">
+                                        <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Left Dropdown
+                                        </a>
+                                        <ul class="dropdown-menu left" aria-labelledby="navbarDropdown2">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-has="true" aria-expanded="false">
+                            {{name}}
+                        </a>
+                        <ul class="dropdown-menu animated fadeIn" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/userlist/"> <i class="icon-lock"></i> User Management</a></li>
+                            <li><a class="dropdown-item" href="/changepassword/{{user.id}}"> <i class="icon-lock"></i> Change Password</a></li>
+                            <li><a class="dropdown-item" href="/logout/"><i class="icon-power"></i> Log Out </a></li>
+                        </ul>
+                    </li>
+    
+                </ul>
+            </div>
+        <!-- </div> -->
+    </nav>
+    </div>
+    {% block content %}
+
+    {% endblock %}
+    <script src="{% static './assets/js/ajax.js' %}"></script>
+    <script src="{% static './assets/js/char.js' %}"></script>
+    <script src="{% static './assets/js/vendor.bundle.base.js' %}"></script>
+    <script src="{% static './assets/daterangepicker/daterangepicker.js' %}"></script>
+    <script src="{% static './assets/js/custom.js' %}"></script>
+    <script src="{% static './assets/datatables/jquery.dataTables.min.js' %}"></script>
+    <script src="https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js"></script>
+    <script src="{% static './assets/datatables-bs4/js/dataTables.bootstrap4.min.js' %}"></script>
+    <script src="{% static './assets/datatables-responsive/js/dataTables.responsive.min.js' %}"></script>
+    <script src="{% static './assets/datatables-responsive/js/responsive.bootstrap4.min.js' %}"></script>
+    <script src="{% static './assets/datatables-buttons/js/dataTables.buttons.min.js' %}"></script>
+    <script src="{% static './assets/datatables-buttons/js/buttons.bootstrap4.min.js' %}"></script>
+    <script src="{% static './assets/datatables-buttons/js/buttons.colVis.min.js' %}"></script>
+    <script src="{% static './assets/select2/select2.min.js' %}"></script>
+    <script src="{% static './assets/js/select2.js' %}"></script>
+    <script src="{% static './assets/js/line.js' %}"></script>
+
+</body>
+
+</html>

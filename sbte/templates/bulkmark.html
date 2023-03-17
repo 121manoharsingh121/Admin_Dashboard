@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="main-panel">
+    <div class="content-wrapper">
+
+        <div class="col-lg-12">
+            <div class="card card-secondary mb-4">
+                <div class="card-body d-lg-flex  justify-content-between">
+
+                    <div class="font-weight-semibold">Bulk Marks Entry</div>
+                    <div class="font-weight-semibold"><a href="login.php" title="Dashboard">Dashboard </a> / Bulk Marks Entry</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 stretch-card grid-margin">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card card-secondary mb-4">
+                        <div class="">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <div class="form-group-lg select2">
+                                        <label class="font-weight-bold">Task*</label>
+                                        <select class="js-example-basic-single" style="width:100%">
+                                            <option value="AL">All</option>
+                                            <option value="WY">14-Chem. Engg.</option>
+                                            <option value="AM">18-C.S.E</option>
+                                            <option value="CA">21-Ec. Engg.</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3">
+                                    <div class="form-group-lg select2">
+                                        <label class="font-weight-bold">Academic Term*</label>
+                                        <select class="js-example-basic-single" style="width:100%">
+                                            <option value="AL">14-Chem. Engg.</option>
+                                            <option value="WY">14-Chem. Engg.</option>
+                                            <option value="AM">18-C.S.E</option>
+                                            <option value="CA">21-Ec. Engg.</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="form-group-lg select2">
+                                        <label class="font-weight-bold">Program Term*</label>
+                                        <select class="js-example-basic-single" style="width:100%">
+                                            <option value="AL">Theory Teacher's Assessment</option>
+                                            <option value="WY">Theory Class Test</option>
+                                            <option value="AM">Theory Final</option>
+                                            <option value="CA">Practical Internal Committee</option>
+                                            <option value="CA">Practical External Committee</option>
+                                            <option value="AM">Sessional Internal</option>
+                                            <option value="CA">Sessional External Committee</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-group-lg select2">
+                                        <label class="font-weight-bold">Institute</label>
+                                        <select class="js-example-basic-single" style="width:100%">
+                                            <option value="AL">113 gp chopra</option>
+                                            <option value="WY">113 gp chopra</option>
+                                            <option value="AM">113 gp chopra</option>
+                                            <option value="CA">113 gp chopra</option>
+                                            <option value="RU">113 gp chopra</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="form-group-lg select2">
+                                        <label class="font-weight-bold">Program</label>
+                                        <select class="js-example-basic-single" style="width:100%">
+                                            <option value="AL">Theory Teacher's Assessment</option>
+                                            <option value="WY">Theory Class Test</option>
+                                            <option value="AM">Sessional Internal</option>
+                                            <option value="CA">Practical Progressive Assessment</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Subject</th>
+                                <th>Opp_1</th>
+                                <th>Opp_2</th>
+                                <th>Compiler</th>
+                                <th>Institute</th>
+                                <th>Program</th>
+                                <th>Count</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-info">
+                                <td> 11223333 </td>
+                                <td>1600300 : Management</td>
+                                <td>completed</td>
+                                <td> $ 77.99 </td>
+                                <td>Civil Engineering </td>
+                                <td> 45 </td>
+                                <td> $ 77.99 </td>
+                                <td>Civil Engineering </td>
+                                
+                            </tr>
+                            <tr class="table-warning">
+                                <td> 11223333 </td>
+                                <td>1600300 : Management</td>
+                                <td>completed</td>
+                                <td> $ 77.99 </td>
+                                <td>Civil Engineering </td>
+                                <td> 45 </td>
+                                <td> $ 77.99 </td>
+                                <td>Civil Engineering </td>
+                               
+                            </tr>
+                            <tr class="table-danger">
+                                <td> 11223333 </td>
+                                <td>1600300 : Management</td>
+                                <td>completed</td>
+                                <td> $ 77.99 </td>
+                                <td>Civil Engineering </td>
+                                <td> 45 </td>
+                                <td> $ 77.99 </td>
+                                <td>Civil Engineering </td>
+                            </tr>
+                           
+                           
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

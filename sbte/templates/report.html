@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- left side bar  -->
+<div class="container-scroller">
+    <div class="container-fluid page-body-wrapper full-page-wrapper">
+        <div class="con-wp d-flex align-items-center auth">
+            <div class="row flex-grow">
+                <div class="col-lg-8 mx-auto">
+                    <div class="auth-form-light text-left p-4">
+                        <h3 class="text-center pb-1">Tabular Report</h3>
+                        <form class="pt-3" method="POST" action=''>
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">Report Type</label>
+                                        <select class="js-example-basic-single" style="width:100%" name="report_type">
+                                           <option value="">Select Report Type</option>
+                                            <option value="1">Examination Form Verification Report</option>
+                                            <option value="2">Attendence sheet of students</option>               
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">Academic Term</label>
+                                        <select class="js-example-basic-single" style="width:100%" name="academic_term">
+                                          <option value=''>Select Academic Term</option>
+                                            {% for e in examsobj %}
+                                            <option value="{{e.id}}">{{e.academic_term}}</option>
+                                            {% endfor %}                                  
+                                        </select>
+                                    </div>
+                                </div> 
+                            </div>     
+                            <div class="row">                                                           
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">Institute</label>
+                                        <select class="js-example-basic-single" style="width:100%" name="institute">
+                                          <option value=''>Select Institute</option>
+                                            {% for i in instoj %}
+                                            <option value="{{i.id}}">{{i.name}}</option>
+                                            {% endfor %}                                   
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">Program</label>
+                                        <select class="js-example-basic-single" style="width:100%" name="program_code">
+                                          <option value=''>Select Program Code</option>
+                                          {% for p in programsobj %}
+                                            <option value="{{p.id}}">{{p.name}} Teacher's Assessment</option>
+                                          {% endfor %}                                   
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">Semester</label>
+                                        <select class="js-example-basic-single" style="width:100%" name="semester_no">
+                                          <option value=''>Select Semester Term</option>
+                                          {% for s in semester %}
+                                          <option value="{{s}}">{{s}}</option>
+                                          {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>                                                        
+                            <p>
+                                <a href="{% url 'admindashboard-view' %}"> <-- Go back</a>
+                            </p>
+                            <div class="mt-3" style="display:table;margin:auto">
+                                <button class="btn btn-primary btn-md ">Download</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- container-scroller -->
+{% endblock%}

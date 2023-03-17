@@ -1,0 +1,389 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- partial -->
+<div class="main-panel">
+    <div class="content-wrapper">
+    <div class="col-lg-12">
+            <div class="card card-secondary mb-4">
+                <div class="card-body d-lg-flex  justify-content-between">
+
+                    <div class="font-weight-semibold">Old Marks Entry</div>
+                    <div class="font-weight-semibold"><a href="login.php" title="Dashboard">Dashboard </a> / Old Marks Entry</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 stretch-card grid-margin">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card card-secondary mb-4">
+                        <div class="">
+
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <div class="form-group-lg select2">
+                                        <label class="font-weight-bold">Task*</label>
+                                        <select class="js-example-basic-single" style="width:100%">
+                                            <option value="AL">1</option>
+                                            <option value="WY">2</option>
+                                            <option value="AM">3</option>
+                                            <option value="CA">4</option>
+                                            <option value="RU">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-2">
+                                    <div class="form-group-lg select2">
+                                        <label class="font-weight-bold">Academic Term*</label>
+                                        <select class="js-example-basic-single" style="width:100%">
+                                            <option value="AL">14-Chem. Engg.</option>
+                                            <option value="WY">14-Chem. Engg.</option>
+                                            <option value="AM">18-C.S.E</option>
+                                            <option value="CA">21-Ec. Engg.</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="form-group-lg select2">
+                                        <label class="font-weight-bold ">Program Term*</label>
+                                        <select class="js-example-basic-single" style="width:100%">
+                                            <option value="AL">Theory Teacher's Assessment</option>
+                                            <option value="WY">Theory Class Test</option>
+                                            <option value="AM">Sessional Internal</option>
+                                            <option value="CA">Practical Progressive Assessment</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="form-group-lg select2">
+                                        <label class="font-weight-bold">Examination Type*</label>
+                                        <select class="js-example-basic-single" style="width:100%">
+                                            <option value="AL">Theory Teacher's Assessment</option>
+                                            <option value="WY">Theory Class Test</option>
+                                            <option value="AM">Theory Final</option>
+                                            <option value="CA">Practical Internal Committee</option>
+                                            <option value="CA">Practical External Committee</option>
+                                            <option value="AM">Sessional Internal</option>
+                                            <option value="CA">Sessional External Committee</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="form-group-lg select2">
+                                        <label class="font-weight-bold">Institute</label>
+                                        <select class="js-example-basic-single" style="width:100%">
+                                            <option value="AL">Theory Teacher's Assessment</option>
+                                            <option value="WY">Theory Class Test</option>
+                                            <option value="AM">Sessional Internal</option>
+                                            <option value="CA">Practical Progressive Assessment</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="form-group-lg select2">
+                                        <label class="font-weight-bold">Program</label>
+                                        <select class="js-example-basic-single" style="width:100%">
+                                            <option value="AL">2022 (EVEN) Additional</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <table id="mud" class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th> Subject</th>
+                                <th> Opp_1</th>
+                                <th>Opp_2</th>
+                                <th>Program</th>
+                                <th>Count</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-info">
+                                <td> 11223333 </td>
+                                <td>1600300 : Management</td>
+                                <td>completed</td>
+                                <td> $ 77.99 </td>
+                                <td>Civil Engineering Civil Engineering</td>
+                                <td> 45 </td>
+                                <td>
+                                    <a href="" title="Compiler" class="mr-2 edit-icon"> <i class="icon-note"></i></a>
+                                    <a href="" title="Operator 1" class="mr-2 edit-icon" data-toggle="modal"
+                                        data-target="#exampleModal"> <i
+                                            class="icon-user">1</i></a>
+                                    <a href="" title="Operator 2" class="mr-2 edit-icon" data-toggle="modal"
+                                        data-target="#exampleModal2"> <i
+                                            class="icon-user">2</i></a>
+                                </td>
+                            </tr>
+                            <tr class="table-warning">
+                                <td> 11223334 </td>
+                                <td>1600300 : Management</td>
+                                <td>completed</td>
+                                <td> $245.30 </td>
+                                <td>Civil Engineering Civil Engineering</td>
+                                <td> 452 </td>
+                                <td>
+                                    <a href="" title="Compiler" class="mr-2 edit-icon"> <i class="icon-note "></i></a>
+                                    <a href="" title="Operator 1" class="mr-2 edit-icon" data-toggle="modal"
+                                        data-target="#exampleModal" class="edit-icon"> <i
+                                            class="icon-user">1</i></a>
+                                    <a href="" title="Operator 2" class="mr-2 edit-icon" data-toggle="modal"
+                                        data-target="#exampleModal2" class="edit-icon"> <i
+                                            class="icon-user">2</i></a>
+                                </td>
+                            </tr>
+                            <tr class="table-danger">
+                                <td> 11223335</td>
+                                <td>1600300 : Management</td>
+                                <td>completed</td>
+                                <td> $138.00 </td>
+                                <td>Civil Engineering Civil Engineering</td>
+                                <td> 457 </td>
+                                <td>
+                                    <a href="" title="Compiler" class="mr-2 edit-icon"> <i class="icon-note edit-icon"></i></a>
+                                    <a href="" title="Operator 1" class="mr-2 edit-icon" data-toggle="modal"
+                                        data-target="#exampleModal"> <i
+                                            class="icon-user">1</i></a>
+                                    <a href="" title="Operator 2" class="mr-2 edit-icon" data-toggle="modal"
+                                        data-target="#exampleModal2"> <i
+                                            class="icon-user">2</i></a>
+                                </td>
+                            </tr>
+                            <tr class="table-success">
+                                <td>11223336 </td>
+                                <td>1600300 : Management</td>
+                                <td>completed</td>
+                                <td> $ 77.99 </td>
+                                <td>Civil Engineering Civil Engineering</td>
+                                <td> 400 </td>
+                                <td>
+                                    <a href="" title="Compiler" class="mr-2 edit-icon"> <i class="icon-note"></i></a>
+                                    <a href="" title="Operator 1" class="mr-2 edit-icon" data-toggle="modal"
+                                        data-target="#exampleModal" class="edit-icon"> <i
+                                            class="icon-user edit-icon">1</i></a>
+                                    <a href="" title="Operator 2" class="mr-2 edit-icon" data-toggle="modal"
+                                        data-target="#exampleModal2"> <i
+                                            class="icon-user">2</i></a>
+                                </td>
+                            </tr>
+                            <tr class="table-primary">
+                                <td>11223337</td>
+                                <td>1600300 : Management</td>
+                                <td>completed</td>
+                                <td> $ 160.25 </td>
+                                <td>Civil Engineering Civil Engineering</td>
+                                <td> 23 </td>
+                                <td>
+                                    <a href="" title="Compiler" class="mr-2 edit-icon"> <i class="icon-note edit-icon"></i></a>
+                                    <a href="" title="Operator 1" class="mr-2 edit-icon" data-toggle="modal"
+                                        data-target="#exampleModal" class="edit-icon"> <i
+                                            class="icon-user edit-icon">1</i></a>
+                                    <a href="" title="Operator 2" class="mr-2 edit-icon" data-toggle="modal"
+                                        data-target="#exampleModal2" class="edit-icon"> <i
+                                            class="icon-user edit-icon">2</i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- operation 1 -->
+<!-- Modal  operation 1-->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Operator 1 Marks Entry</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <table class="table table-bordered ">
+                    <thead>
+                        <tr>
+                            <th> Sr No. </th>
+                            <th> Roll Number </th>
+                            <th> Student Name </th>
+                            <th> Absent </th>
+                            <th> Marks </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-info">
+                            <td> 1 </td>
+                            <td> 611111419601 </td>
+                            <td> NITISH KUMAR </td>
+                            <td>
+                                <div class="form-check form-check-success">
+                                    <label class="form-check-label" id="button1">
+                                        <input type="checkbox" class="form-check-input" checked>&nbsp; </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-check-inline check-mark">
+
+                                    <input type="text" maxlength="3" id="sName"
+                                        class="form-check-input form-control-sm check-mark">
+
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="modal-footer">
+                <input name="submit" type="submit" id="btnsubmit" value="Save Marks"
+                    class="btn-sm btn-rounded btn btn-success">
+                <input name="submit" type="submit" data-toggle="modal" data-target="#completed" value="Task Completed"
+                    class="btn-sm btn-rounded btn btn-primary">
+                <!-- <button type="button" class="btn-lg btn btn-danger" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- model end -->
+
+
+
+<!-- model operation 2 -->
+<div class="modal fade " id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Operator 2 Marks Entry</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered ">
+                    <thead>
+                        <tr>
+                            <th> Sr No. </th>
+                            <th> Roll Number </th>
+                            <th> Student Name </th>
+                            <th> Absent </th>
+                            <th> Marks </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-info">
+                            <td> 1 </td>
+                            <td> 611111419601 </td>
+                            <td> NITISH KUMAR </td>
+                            <td>
+                                <div class="form-check form-check-success">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" id="button2" class="form-check-input" checked>&nbsp;
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-check-inline check-mark">
+                                    <input type="text" maxlength="3" id="sNames"
+                                        class="form-check-input form-control-sm check-mark">
+
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="modal-footer">
+                    <input name="submit" type="submit" id="btnsubmit" value="Save Marks"
+                        class="btn-sm btn btn-rounded btn-success mt-3">
+                    <input name="submit" type="submit" data-toggle="modal" data-target="#completed"
+                        value="Task Completed" class="btn-sm btn btn-rounded btn-primary mt-3">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- end operation2 -->
+
+    <!-- model operation1 popup -->
+    <div class="modal mode-1 fade " id="completed" tabindex="-1" role="dialog" aria-labelledby="completedLabel"
+        aria-hidden="true">
+        <div class="modal-dialog btn-aler alert alert-success modal-lg" role="document">
+
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            Updated recorded successfully
+
+        </div>
+    </div>
+    <!-- end model popup -->
+
+
+
+    <!-- end -->
+
+
+
+    <!-- popup action -->
+    <div class="modal fade" id="complte" tabindex="-1" role="dialog" aria-labelledby="complteLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Modify Marks</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="font-weight-bold">Marks Obtained</label>
+                                <input type="text" class="form-control form-control-lg" placeholder="Marks Obtained"
+                                    maxlength="6" aria-label="Username">
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="font-weight-bold">Remarks</label>
+                                <input type="text" class="form-control form-control-lg" placeholder="Remarks"
+                                    aria-label="Username">
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <button type="button" class="btn btn-sm btn-rounded btn-info mt-4" data-toggle="modal"
+                        data-target="#save">Save</button>
+                </div>
+                <div class="modal mode-1 fade " id="save" tabindex="-1" role="dialog" aria-labelledby="save"
+                    aria-hidden="true">
+                    <div class="modal-dialog btn-aler alert alert-success modal-md" role="document">
+
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        Updated recorded successfully
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}

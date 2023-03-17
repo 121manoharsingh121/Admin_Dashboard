@@ -1,0 +1,455 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="main-panel">
+    <div class="content-wrapper">
+    <div class="col-lg-12">
+      <div class="card card-secondary mb-4">
+            <div class="card-body d-lg-flex  justify-content-between">
+               
+            <div>Student Registration</div>
+            <div><a href="login.php" title="Dashboard">Dashboard </a> / Student Registration</div>
+            </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-12">
+      <div class="card card-secondary mb-4">
+            <div class="card-body   justify-content-between">
+               
+            <div class="row">
+                <div class="col-lg-5">
+                <div class="form-group">
+                        <label for="exampleInputName1">Roll No/Registration No</label>
+                        <input type="text" class="form-control form-control-sm" id="exampleInputName1" placeholder="Enter Fill Detail">
+                      </div>
+                </div>
+                <div class="col-lg-5">
+                <div class="form-group">
+                                <div class="md-form md-outline input-with-post-icon datepicker">
+                                    <label for="date"> Date Of Birth</label>
+                                    <input placeholder="Select date" type="date" id="date"
+                                        class="form-control form-control-sm" required>
+                                </div>
+                            </div>
+                </div>
+                <div class="col-lg-2 mt-1">
+                    <br>
+                <button type="submit" class="btn btn-sm btn-rounded  btn-info d-flex m-auto" onclick="myFunction()" >Show Detail</button>
+                </div>
+            </div>
+            </div>
+        </div>
+      </div>
+
+        <div class="col-lg-12 stretch-card grid-margin " id="dglow" style="display:none;">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title mb-5">Student Registration</h4>
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <table class="regis-student">
+                                <tr>
+                                    <td class="pb-2">Bcece Roll No. </td>
+                                    <td class="fn-bld pb-2">:61001896</td>
+
+                                </tr>
+                                <tr">
+                                    <td class="pb-2">Student Name</td>
+                                    <td class="fn-bld pb-2">:61001896</td>
+
+                                </tr>
+                                <tr>
+                                    <td class="pb-2">Date Of Birth </td>
+                                    <td class="fn-bld pb-2">:61001896</td>
+
+                                </tr>
+                                <tr>
+                                    <td class="pb-2">Father Name</td>
+                                    <td class="fn-bld pb-2">:61001896</td>
+
+                                </tr>
+                            </table>
+
+
+                        </div>
+                        <div class="col-lg-4">
+                            <table>
+                                <tr>
+                                    <td class="pb-2">Program</td>
+                                    <td class="fn-bld pb-2">:61001896</td>
+
+                                </tr>
+                                <tr>
+                                    <td class="pb-2">Institute</td>
+                                    <td class="fn-bld pb-2">:61001896</td>
+
+                                </tr>
+                                <tr>
+                                    <td class="pb-2">Mobile No</td>
+                                    <td class="fn-bld pb-2">:61001896</td>
+
+                                </tr>
+                                <tr>
+                                    <td class="pb-2">Email</td>
+                                    <td class="fn-bld pb-2">:dummy@123@gmail.com</td>
+
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-lg-3">
+                            <table>
+                                <tr>
+                                    <td class="pb-2">Lateral Entry </td>
+                                    <td class="fn-bld pb-2">:LE</td>
+
+                                </tr>
+                                <tr>
+                                    <td class="pb-2">Student category</td>
+                                    <td class="fn-bld pb-2">:GEN</td>
+
+                                </tr>
+                                <tr>
+                                    <td class="pb-2">Admission category </td>
+                                    <td class="fn-bld pb-2">:GEN</td>
+
+                                </tr>
+                                <tr>
+                                    <td class="pb-2">Gender</td>
+                                    <td class="fn-bld pb-2">:M</td>
+
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="col-lg-2">
+                            <div>
+                                <img src="/static/images/inner-image/profile.jpg" style="width:100px; height:70px;" alt="">
+                            </div>
+                            <div>
+                                <img src="static/images/inner-image/sign.jpg" class="pt-1" style="width:100px;" alt="">
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <br>
+                    <br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="user">Mother Name</label>
+                                <input type="text" class="form-control form-control-sm" id="user" placeholder="Enter Mother Name"
+                                    required>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <div class="md-form md-outline input-with-post-icon datepicker">
+                                    <label for="date">Admission Date</label>
+                                    <input placeholder="Select date" type="date" id="date"
+                                        class="form-control form-control-sm" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="user">Aadhaar No</label>
+                                <input type="text" class="form-control form-control-sm" id="user" placeholder="Enter Aadhaar No"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="card-description font-weight-bold">Communication Address </p>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="user">Address Line 1</label>
+                                <input type="text" class="form-control form-control-sm" id="user" placeholder="Enter Address Line 1"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="user">Address Line 2</label>
+                                <input type="text" class="form-control form-control-sm" id="user" placeholder="Enter Address Line 2"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="user">Address Line 3</label>
+                                <input type="text" class="form-control form-control-sm" id="user" placeholder="Enter Address Line 3"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="user">State</label>
+                                <input type="text" class="form-control form-control-sm" id="user" placeholder="Enter State"
+                                    required>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="user">Country</label>
+                                <input type="text" class="form-control form-control-sm" id="user" placeholder="Enter Country"
+                                    required>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="user">Pincode</label>
+                                <input type="text" class="form-control form-control-sm" id="user" placeholder="Enter Pincode"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="card-description font-weight-bold ">Permanent Address </p>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="user">Address Line 1</label>
+                                <input type="text" class="form-control form-control-sm" id="user" placeholder="Enter Address Line 1"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="user">Address Line 2</label>
+                                <input type="text" class="form-control form-control-sm" id="user" placeholder="Enter Address Line 2"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="user">Address Line 3</label>
+                                <input type="text" class="form-control form-control-sm" id="user" placeholder="Enter Address Line 3"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="user">State</label>
+                                <input type="text" class="form-control form-control-sm" id="user" placeholder="Enter State"
+                                    required>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="user">Country</label>
+                                <input type="text" class="form-control form-control-sm" id="user" placeholder="Enter Country"
+                                    required>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="user">Pincode</label>
+                                <input type="text" class="form-control form-control-sm" id="user" placeholder="Enter Pincode"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="card-description font-weight-bold ">Educational Details</p>
+                    <div class="row">
+                        <div class="col-lg-1">
+                            <div class="form-group">
+                                <label for="user">Exam Name</label>
+                                <input type="text" class="form-control form-control-sm" id="user" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="form-group">
+                                <label for="user">Board/University</label>
+                                <input type="text" class="form-control form-control-sm" id="user" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="form-group">
+                                <label for="user">School/College</label>
+                                <input type="text" class="form-control form-control-sm" id="user" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="form-group">
+                                <label for="user">Roll NO</label>
+                                <input type="text" class="form-control form-control-sm" id="user" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-1">
+                            <div class="form-group">
+                                <label for="user">Year</label>
+                                <input type="text" class="form-control form-control-sm" id="user" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="form-group">
+                                <label for="user">Subject</label>
+                                <input type="text" class="form-control form-control-sm" id="user" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-1">
+                            <div class="form-group">
+                                <label for="user">Result</label>
+                                <input type="text" class="form-control form-control-sm" id="user" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-1">
+                            <div class="form-group">
+                                <label for="user">Marks%</label>
+                                <input type="text" class="form-control form-control-sm" id="user" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-1">
+                            <div class="form-group">
+
+                                <select class="form-control">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-sm" id="user" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="form-group">
+
+                                <input type="text" class="form-control form-control-sm" id="user" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-sm" id="user" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-1">
+                            <div class="form-group">
+
+                                <input type="text" class="form-control form-control-sm" id="user" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="form-group">
+
+                                <input type="text" class="form-control form-control-sm" id="user" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-1">
+                            <div class="form-group">
+
+                                <input type="text" class="form-control form-control-sm" id="user" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-1">
+                            <div class="form-group">
+
+                                <input type="text" class="form-control form-control-sm" id="user" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-sm btn-rounded  btn-info d-flex m-auto" data-toggle="modal"
+                        data-target="#exampleModal" title="Student Data is Over">Student Data is Over</button>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- Modal  operation 1-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="exampleModalLabel">Course Details of Sem-1 for Lateral Entry Students</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                        <table class="table table-bordered ">
+                            <thead>
+                                <tr>
+                                    <th>CODE </th>
+                                    <th> NAME </th>
+                                    <th> TYPE</th>
+                                    <th>MAX MARKS</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="table-info">
+                                    <td>20000000 </td>
+                                    <td>Engg-Graphics </td>
+                                    <td> Theory </td>
+                                    <td> 100 </td>
+                                </tr>
+                                <tr class="table-info">
+                                    <td>20000000 </td>
+                                    <td>Engg-Graphics </td>
+                                    <td> Theory </td>
+                                    <td> 100 </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-sm btn  btn-info" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- model end -->
+
+      <div class="col-lg-12">
+      <div class="card card-secondary mb-4">
+            <div class="card-body   justify-content-between">
+               
+            <div class="row">
+                <div class="col-lg-10 col-sm-10">
+                   Your details have been submitted successfully!
+                </div>
+                <div class="col-lg-2 col-sm-2">
+                <button type="submit" class="btn btn-sm btn-rounded  btn-info d-flex m-auto" >Pay Now</button>
+                </div>
+            </div>
+            </div>
+        </div>
+      </div>
+      <!-- end submit -->
+
+
+
+
+{% endblock %}

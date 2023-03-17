@@ -1,0 +1,207 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="col-lg-12">
+            <div class="card card-secondary mb-4">
+                <div class="card-body d-lg-flex  justify-content-between">
+
+                    <div class="font-weight-semibold">Marks Entry Individual Student</div>
+                    <div class="font-weight-semibold"><a href="login.php" title="Dashboard">Dashboard </a> / Marks Entry Individual Student</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 stretch-card grid-margin">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card card-secondary mb-4">
+                        <div class="">
+
+                            <div class="row">
+                                <div class="col-lg-3">
+                                 
+
+                                    <div class="form-group">
+                                        <label class="font-weight-bold re-sz-no" for="exampleInputName1">Registration Number*</label>
+                                        <input type="text" class="form-control mt-2" id="exampleInputName1" placeholder="Name">
+                                        </div>
+                                </div>
+
+                                <div class="col-lg-3">
+                                    <div class="form-group-lg select2">
+                                        <label class="font-weight-bold">Academic Term*</label>
+                                        <select class="js-example-basic-single" style="width:100%">
+                                            <option value="AL">14-Chem. Engg.</option>
+                                            <option value="WY">14-Chem. Engg.</option>
+                                            <option value="AM">18-C.S.E</option>
+                                            <option value="CA">21-Ec. Engg.</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="form-group-lg select2">
+                                        <label class="font-weight-bold">Program Term*</label>
+                                        <select class="js-example-basic-single" style="width:100%">
+                                            <option value="AL">Theory Teacher's Assessment</option>
+                                            <option value="WY">Theory Class Test</option>
+                                            <option value="AM">Sessional Internal</option>
+                                            <option value="CA">Practical Progressive Assessment</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-group-lg select2">
+                                        <label class="font-weight-bold">Attempt*</label>
+                                        <select class="js-example-basic-single" style="width:100%">
+                                            <option value="AL">Theory Teacher's Assessment</option>
+                                            <option value="WY">Theory Class Test</option>
+                                            <option value="AM">Theory Final</option>
+                                            <option value="CA">Practical Internal Committee</option>
+                                            <option value="CA">Practical External Committee</option>
+                                            <option value="AM">Sessional Internal</option>
+                                            <option value="CA">Sessional External Committee</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-1">
+                                <br>
+                                    <button type="button" class="btn btn-sm btn-rounded btn-info mt-3"
+                                        title="Assign Task">Search</button>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+
+                    <!-- <table  class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Course Title</th>
+                                <th> Operation1</th>
+                                <th>Operation2</th>
+                                <th>Compiler</th>
+                                <th>Institute</th>
+                                <th>Program</th>
+                                <th>Subject Count</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-info">
+                                <td> 11223333 </td>
+                                <td>1600300 : Management</td>
+                                <td>completed</td>
+                                <td> $ 77.99 </td>
+                                <td>Civil Engineering </td>
+                                <td> 45 </td>
+                                <td> $ 77.99 </td>
+                                <td>Civil Engineering </td>
+                                <td> 45 </td>
+                            </tr>
+                            <tr class="table-warning">
+                            <td> 11223333 </td>
+                                <td>1600300 : Management</td>
+                                <td>completed</td>
+                                <td> $ 77.99 </td>
+                                <td>Civil Engineering </td>
+                                <td> 45 </td>
+                                <td> $ 77.99 </td>
+                                <td>Civil Engineering </td>
+                                <td> 45 </td>
+                            </tr>
+                            <tr class="table-danger">
+                            <td> 11223333 </td>
+                                <td>1600300 : Management</td>
+                                <td>completed</td>
+                                <td> $ 77.99 </td>
+                                <td>Civil Engineering </td>
+                                <td> 45 </td>
+                                <td> $ 77.99 </td>
+                                <td>Civil Engineering </td>
+                                <td> 45 </td>
+                            </tr>
+                            <tr class="table-success">
+                            <td> 11223333 </td>
+                                <td>1600300 : Management</td>
+                                <td>completed</td>
+                                <td> $ 77.99 </td>
+                                <td>Civil Engineering </td>
+                                <td> 45 </td>
+                                <td> $ 77.99 </td>
+                                <td>Civil Engineering </td>
+                                <td> 45 </td>
+                            </tr>
+                            <tr class="table-primary">
+                            <td> 11223333 </td>
+                                <td>1600300 : Management</td>
+                                <td>completed</td>
+                                <td> $ 77.99 </td>
+                                <td>Civil Engineering </td>
+                                <td> 45 </td>
+                                <td> $ 77.99 </td>
+                                <td>Civil Engineering </td>
+                                <td> 45 </td>
+                            </tr>
+                        </tbody>
+                    </table> -->
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+<!-- popup action -->
+<div class="modal fade" id="complte" tabindex="-1" role="dialog" aria-labelledby="complteLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Modify Marks</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label class="font-weight-bold">Marks Obtained</label>
+                            <input type="text" class="form-control form-control-lg" placeholder="Marks Obtained"
+                                maxlength="6" aria-label="Username">
+                        </div>
+
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label class="font-weight-bold">Remarks</label>
+                            <input type="text" class="form-control form-control-lg" placeholder="Remarks"
+                                aria-label="Username">
+                        </div>
+
+                    </div>
+
+                </div>
+                <button type="button" class="btn btn-sm btn-rounded btn-info mt-4" data-toggle="modal"
+                    data-target="#save">Save</button>
+            </div>
+            <div class="modal mode-1 fade " id="save" tabindex="-1" role="dialog" aria-labelledby="save"
+                aria-hidden="true">
+                <div class="modal-dialog btn-aler alert alert-success modal-md" role="document">
+
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    Updated recorded successfully
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

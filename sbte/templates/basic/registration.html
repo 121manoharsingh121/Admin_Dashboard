@@ -1,0 +1,87 @@
+
+{% extends "base1.html" %}
+{% block content %}
+    <div class="container-scroller">
+        <div class="container-fluid page-body-wrapper full-page-wrapper">
+            <div class="con-wp d-flex align-items-center auth">
+                <div class="row flex-grow">
+                    <div class="col-lg-6 mx-auto">
+                        <div class="auth-form-light text-left p-4">
+                            <h3 class="text-center">Registration</h3>
+                            <form class="pt-3" method="POST" action='/registration/'> 
+                                {% csrf_token %}
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="username">Username</label>
+                                            {{form.username}}
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="email">Email Address</label>
+                                            {{form.email}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="dob">First Name</label>
+                                                {{form.first_name}}
+                                        </div> 
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="mobile">Last Name</label>
+                                                {{form.last_name}}
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="dob">Date Of Birth</label>
+                                                {{form.dob}}
+                                        </div> 
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="mobile">Contact Number</label>
+                                                {{form.mobile}}
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="password1">Choose a Password</label>
+                                                {{form.password1}}
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="password2">Confirm Password</label>                         
+                                                {{form.password2}}
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="mt-3" style="display:table;margin:auto">
+                                    <button type="submit" class="btn btn-primary btn-md ">Register</button>
+                                </div>                               
+                                <div class="form-check">
+                                    <p class="text-center">If you have an account? <a href="/login/">Login</a></p>
+                                </div>
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- container-scroller -->
+{% endblock%}
+<!-- left side bar  -->
+
+<!-- container-scroller -->

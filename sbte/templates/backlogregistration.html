@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="main-panel">
+    <div class="content-wrapper">
+    <div class="col-lg-12">
+            <div class="card card-secondary mb-4">
+                <div class="card-body d-lg-flex  justify-content-between">
+
+                    <div class="font-weight-semibold">Backlog Registration</div>
+                    <div class="font-weight-semibold"><a href="login.php" title="Dashboard">Dashboard </a> / Backlog Registration</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 stretch-card grid-margin">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title mb-5"></h4>
+                    <div class="card card-secondary mb-4">
+                        <div class="">
+
+                            <div class="row">
+
+
+                                <div class="col-lg-3">
+                                    <div class="form-group-lg select2">
+                                        <label class="font-weight-bold">Academic Term*</label>
+                                        <select class="js-example-basic-single" style="width:100%">
+                                            <option value="AL">14-Chem. Engg.</option>
+                                            <option value="WY">14-Chem. Engg.</option>
+                                            <option value="AM">18-C.S.E</option>
+                                            <option value="CA">21-Ec. Engg.</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-group-lg select2">
+                                        <label class="font-weight-bold">Program Term*</label>
+                                        <select class="js-example-basic-single" style="width:100%">
+                                            <option value="AL">Theory Teacher's Assessment</option>
+                                            <option value="WY">Theory Class Test</option>
+                                            <option value="AM">Theory Final</option>
+                                            <option value="CA">Practical Internal Committee</option>
+                                            <option value="CA">Practical External Committee</option>
+                                            <option value="AM">Sessional Internal</option>
+                                            <option value="CA">Sessional External Committee</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-group-lg select2">
+                                        <label class="font-weight-bold">Institute*</label>
+                                        <select class="js-example-basic-single" style="width:100%">
+                                            <option value="AL">1</option>
+                                            <option value="WY">2</option>
+                                            <option value="AM">3</option>
+                                            <option value="CA">4</option>
+                                            <option value="RU">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-group-lg select2">
+                                        <label class="font-weight-bold">Program</label>
+                                        <select class="js-example-basic-single" style="width:100%">
+                                            <option value="AL">Theory Teacher's Assessment</option>
+                                            <option value="WY">Theory Class Test</option>
+                                            <option value="AM">Sessional Internal</option>
+                                            <option value="CA">Practical Progressive Assessment</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <table id="mud" class="table table-bordered">
+                           <thead>
+                            <tr>
+                                <th>Exam</th>
+                                <th> Subject Code</th>
+                                <th>Exam Date</th>
+                                <th>Objective</th>
+                                <th>Subjective</th>
+                                <th>Fictitious</th>
+                                <th>Bundle Name</th>
+                                <th>Ans Book No</th>
+                                <th>Bar Code</th>
+                                <th>Remarks</th>
+                            </tr>
+                            </thead>
+                             <tbody>
+                            <tr class="table-info">
+                                <td>2021 (odd)</td>
+                                <td>2234567</td>
+                                <td>completed</td>
+                                <td> 0 </td>
+                                <td>15</td>
+                                <td>completed</td>
+                                <td> $ 77.99 </td>
+                                <td> Civil</td>
+                                <td> 45 </td>
+                                <td> 45 </td>
+                            </tr>
+                            <tr class="table-warning">
+                                <td>2021 (odd)</td>
+                                <td>2234567</td>
+                                <td>completed</td>
+                                <td> 0 </td>
+                                <td>15</td>
+                                <td>completed</td>
+                                <td> $ 77.99 </td>
+                                <td> Civil</td>
+                                <td> 45 </td>
+                                <td> 45 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock%}

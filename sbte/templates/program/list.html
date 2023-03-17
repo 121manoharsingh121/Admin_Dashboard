@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- partial -->
+<div class="main-panel">
+    <div class="con-wp">
+        <div class="col-lg-12 ">
+            <div class="card">
+                <div class="card-body">
+                    <div class=" d-lg-flex  justify-content-between pb-4">
+                        <div class="font-weight-semibold">All Program List </div>
+                        <div class="font-weight-semibold"><a href="/program_add/"<button class="btn btn-sm bg-primary">Add Program</button></a></div>
+                    </div>
+               
+       <div class="table-responsive">
+        <table id="mud"  class="table table-bordered">
+            <thead>
+            <tr> 
+            <th>Program Code</th> 
+            <th>Program Name</th>  
+            <th>Program Short Name</th> 
+            <th>Status</th>   
+            <th>Actions</th>  
+            </tr>
+            </thead>
+            <tbody> 
+            {% for program in programs %}                         
+            <tr class="table-primary">
+                <td>{{ program.code }}</td>  
+                <td>{{ program.name }}</td>  
+                <td>{{ program.short_name }}</td>
+                <td class="d-flex flex-row justify-content-center"> 
+                    {% if program.is_active %} 
+                    <span class="text-info">Active</span>
+                    {% else %}
+                    <span class="text-danger"> InActive </span>
+                    {% endif %}                      
+                </td> 
+            <td >   
+            <a href="{% url 'programedit-view' program.id %}"><span class="btn btn-sm bg-success">Edit</span></a>
+            <span class="btn btn-sm bg-danger" data-toggle="modal" id="{{ program.id }}" value={{program.id}} onclick="program(this.id)">Delete</span>
+            </td>
+            </tr>
+            {% endfor %}  
+            </tbody>
+            </table>
+       </div>
+    </div>
+                
+</div>
+</div>
+        
+</div>
+</div>
+## Delete PopUp ##
+<script type="text/javascript">
+    function program(obj) {
+        
+        console.log(obj)
+        swal({
+            title: "Are you sure?",
+            text: "You Want to Delete this Program !",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+          })
+          .then((willDelete) => {
+            if (willDelete) {
+              $.ajax({
+
+                url: "/program_delete/"+obj,
+                success: function(response){
+                        window.location.reload();
+                    
+                }
+              });
+            }
+          });
+    }
+</script>
+{% endblock %}

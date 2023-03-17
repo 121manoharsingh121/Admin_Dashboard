@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- partial -->
+<div class="main-panel">
+    <div class="con-wp">
+        <div class="col-lg-12 ">
+            <div class="card">
+                <div class="card-body">
+                    <div class=" d-lg-flex  justify-content-between pb-4">
+                        <div class="font-weight-semibold">All Academic Session List </div>
+                        <div class="font-weight-semibold"><a href="/academicsessionadd/"<button class="btn btn-sm bg-primary">Add Session</button></a></div>
+                    </div>
+               
+       <div class="table-responsive">
+        <table id="mud"  class="table table-bordered">
+            <thead>
+            <tr>  
+            <th style='padding-right:200px'>Academic Session Name</th>   
+            <th>For Lateral</th>   
+            <th>Actions</th>  
+            </tr>
+            </thead>
+            <tbody> 
+            {% for session in sessions %}                         
+            <tr class="table-primary"> 
+            <td>{{ session.name }}</td>
+            <td>
+                {% if session.for_le %} 
+                <span class="text-info">Yes</span>
+                {% else %}
+                <span class="text-danger">No</span>
+                {% endif %} 
+            </td>     
+            <td >   
+            <a href="{% url 'academicsessionedit-view' session.id %}"><span class="btn btn-sm bg-success">Edit</span></a>
+            <span class="btn btn-sm bg-danger" data-toggle="modal" id="{{ session.id }}" value={{session.id}} onclick="session(this.id)">Delete</span>
+            </td>
+            </tr>
+            {% endfor %}  
+            </tbody>
+            </table>
+       </div>
+    </div>
+                
+</div>
+</div>      
+</div>
+</div>
+## Delete PopUp ##
+<script type="text/javascript">
+    function session(obj) {
+        
+        console.log(obj)
+        swal({
+            title: "Are you sure?",
+            text: "You Want to Delete this Session !",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+          })
+          .then((willDelete) => {
+            if (willDelete) {
+              $.ajax({
+
+                url: "/academicsessiondelete/"+obj,
+                success: function(response){
+                        window.location.reload();
+                    
+                }
+              });
+            }
+          });
+    }
+</script>
+{% endblock %}
+

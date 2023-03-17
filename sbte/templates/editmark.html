@@ -1,0 +1,175 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="main-panel">
+    <div class="content-wrapper">
+    <div class="col-lg-12">
+            <div class="card card-secondary mb-4">
+                <div class="card-body d-lg-flex  justify-content-between">
+
+                    <div class="font-weight-semibold">Edit Marks</div>
+                    <div class="font-weight-semibold"><a href="login.php" title="Dashboard">Dashboard </a> / Edit Marks</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <form class="form-inline">
+                        <label class="form-check-label">
+                            Enter Roll Number </label>
+                        <input type="text" class="form-control mb-2 ml-2 mr-sm-2" id="inlineFormInputName2"
+                            placeholder="Enter Your Roll Number">
+                        <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+
+
+                        <button type="submit" class="btn btn-rounded btn-info mb-2">Get Marks Detail</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 stretch-card grid-margin">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Student Name: ()</h4>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Subject</th>
+                                <th> Type </th>
+                                <th> Max Marks </th>
+                                <th> OPP1</th>
+                                <th> OPP2 </th>
+                                <th> Marks</th>
+                                <th> Actions </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-info">
+                                <td> 1 </td>
+                                <td> Herman Beck </td>
+                                <td> Photoshop </td>
+                                <td> $ 77.99 </td>
+                                <td> May 15, 2015 </td>
+                                <td> $ 77.99 </td>
+                                <td> <a href="" data-toggle="modal" data-target="#complte" class="edit-icon"><i
+                                            class="icon-note" title="Modify"></i> </a> </td>
+                                <!-- <td> <button type="submit" class="btn btn-sm btn-info mb-2">Modify</button> </td> -->
+                            </tr>
+                            <tr class="table-warning">
+                                <td> 2 </td>
+                                <td> Messsy Adam </td>
+                                <td> Flash </td>
+                                <td> $245.30 </td>
+                                <td> July 1, 2015 </td>
+                                <td> $ 77.99 </td>
+                                <td> <a href="" data-toggle="modal" data-target="#complte" class="edit-icon"><i
+                                            class="icon-note" title="Modify"></i> </a> </td>
+                            </tr>
+                            <tr class="table-danger">
+                                <td> 3 </td>
+                                <td> John Richards </td>
+                                <td> Premeire </td>
+                                <td> $138.00 </td>
+                                <td> Apr 12, 2015 </td>
+                                <td> $ 77.99 </td>
+                                <td> <a href="" data-toggle="modal" data-target="#complte" class="edit-icon"><i
+                                            class="icon-note" title="Modify"></i> </a> </td>
+                            </tr>
+                            <tr class="table-success">
+                                <td> 4 </td>
+                                <td> Peter Meggik </td>
+                                <td> After effects </td>
+                                <td> $ 77.99 </td>
+                                <td> May 15, 2015 </td>
+                                <td> $ 77.99 </td>
+                                <td> <a href="" data-toggle="modal" data-target="#complte" class="edit-icon"><i
+                                            class="icon-note" title="Modify"></i> </a> </td>
+                            </tr>
+                            <tr class="table-primary">
+                                <td> 5 </td>
+                                <td> Edward </td>
+                                <td> Illustrator </td>
+                                <td> $ 160.25 </td>
+                                <td> May 03, 2015 </td>
+                                <td> $ 77.99 </td>
+                                <td> <a href="" data-toggle="modal" data-target="#complte" class="edit-icon"><i
+                                            class="icon-note" title="Modify"></i> </a> </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="d-flex mt-4 flex-wrap">
+                        <p class="text-muted">Showing 1 to 10 of 57 entries</p>
+                        <nav class="ml-auto">
+                            <ul class="pagination separated pagination-info">
+                                <li class="page-item"><a href="#" class="page-link"><i class="icon-arrow-left"></i></a>
+                                </li>
+                                <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                                <li class="page-item"><a href="#" class="page-link">2</a></li>
+                                <li class="page-item"><a href="#" class="page-link">3</a></li>
+                                <li class="page-item"><a href="#" class="page-link">4</a></li>
+                                <li class="page-item"><a href="#" class="page-link"><i class="icon-arrow-right"></i></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+
+                    <!-- popup action -->
+                    <div class="modal fade" id="complte" tabindex="-1" role="dialog" aria-labelledby="complteLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3>Modify Marks</h3>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label class="font-weight-bold">Marks Obtained</label>
+                                                <input type="text" class="form-control form-control-lg"
+                                                    placeholder="Marks Obtained" maxlength="6" aria-label="Username">
+                                            </div>
+
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label class="font-weight-bold">Remarks</label>
+                                                <input type="text" class="form-control form-control-lg"
+                                                    placeholder="Remarks" aria-label="Username">
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <button type="button" class="btn btn-sm btn-rounded btn-info mt-4"
+                                        data-toggle="modal" data-target="#save">Save</button>
+                                </div>
+                                <div class="modal mode-1 fade " id="save" tabindex="-1" role="dialog" aria-labelledby="save"
+                            aria-hidden="true">
+                            <div class="modal-dialog btn-aler alert alert-success modal-md" role="document">
+
+                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                Updated recorded successfully
+
+                            </div>
+                        </div>
+                            </div>
+                            
+                        </div>
+                     
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            </div>
+    </div>
+        </div>
+    {% endblock %}
